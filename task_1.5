@@ -1,0 +1,14 @@
+start=int(input("Input number for starting range: "))
+end=int(input("Input number for ending range: "))
+prime_numbers=[]
+for num in range(start,end+1):
+    if num>1:
+        for i in range(2,int(num ** 0.5)+1):
+            if(num%i)==0:
+                break
+        else:
+            prime_numbers.append(num)
+
+print("The prime numbers between",start,"and",end,"are:")
+print(*prime_numbers)
+print("The total number of prime numbers between",start,"and",end,"is:",len(prime_numbers))
